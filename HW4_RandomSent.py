@@ -4,7 +4,7 @@ import string
 import random
 
 #для того что ниже....первый range для кол символов в слове и второй range для кол слов в предложении
-randomsent=' '.join(''.join(random.choice(string.ascii_lowercase) for i in range(3)) for i in range(6))
+randomsent=' '.join(''.join(random.choice(string.ascii_lowercase) for i in range(random.randint(3,6))) for i in range(random.randint(3,6)))
 
 print("Наш случайный текст:",'\n',randomsent)
 
