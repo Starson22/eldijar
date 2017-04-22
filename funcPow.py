@@ -6,15 +6,14 @@
 
 '''
 
-
-
 def fun(*args):
-	s=list(args)
-	z=[int(y)**int(x) for x,y in zip(s,s[1:])]# возводим в степень все кроме 1го числа
-	k=s[:1] # выташил как str
-	p=[int(y) for y in k] # перевел на int то первое число
-	t=p+z # соединяес 1-е и остальное
-	print(t)
+	tmp = 1 
+	result=list() 
+	for i in args: 
+		result.append(int(i)**tmp) 
+		tmp=int(i) 
+	print(', '.join(map(str,result)))
 
 x=input("Введите числа разделенные запятой: ").split(",")
+
 fun(*x)
