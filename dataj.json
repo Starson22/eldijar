@@ -1,0 +1,33 @@
+[
+    {
+        "FIELD1": "Item",
+        "FIELD2": "Quant",
+        "FIELD3": "Type"
+    },
+    {
+        "FIELD1": "Socks",
+        "FIELD2": "3",
+        "FIELD3": "Pair"
+    },
+    {
+        "FIELD1": "Pants",
+        "FIELD2": "7",
+        "FIELD3": "Unit"
+    },
+    {
+        "FIELD1": "Shirts",
+        "FIELD2": "8",
+        "FIELD3": "Unit"
+    },
+    {
+        "FIELD1": "Shoes",
+        "FIELD2": "8",
+        "FIELD3": "Pair"
+    },
+    {
+        "FIELD1": "Belts",
+        "FIELD2": "8",
+        "FIELD3": "Unit"
+    }
+]
+
