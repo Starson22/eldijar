@@ -11,9 +11,16 @@ with open("data.txt", "r") as file:
 		l.append(line.strip("\n"))
 
 l1=[i.split() for i in l[1:]]
-pairs=[int(i[1]) for i in l1 if i[2]=="пары"]
-units=[int(i[1]) for i in l1 if i[2]=="шт"]
-
-with open("data.txt", "a") as d:
-	d.write("\nСумма пар %d и  сумма шт %d" %(sum(pairs),sum(units)))
-
+# pairs=[int(i[1]) for i in l1 if i[2]=="пары"] #старое
+# units=[int(i[1]) for i in l1 if i[2]=="шт"]
+d={}                                            #новое
+for i in l1: 
+	if i[2] in d:
+		d[i[2]]+=int(i[1])
+	else:
+		d.update({i[2]:int(i[1])})
+# with open("data.txt", "a") as d:
+# 	d.write("\nСумма пар %d и  сумма шт %d" %(sum(pairs),sum(units))) #старое
+with open("data.txt", "a") as f:                                      #новое
+	for key, val in d.items():
+		f.write("Сумма '%s' равна %d\n" %(key,val))

@@ -21,6 +21,6 @@ def path_structure(path):
 
     return hierarchy
 
-with open("files.json", "w") as d:
+with open("filesfolders.json", "w") as d:
 	json.dump(path_structure(input("Ведите путь:")), d,ensure_ascii=False, indent=4)# indent делает визульнло приятным
-print("Структура папки была сохранена в файле files.json") #теперь работает и с кириллицей
+print("Структура папки была сохранена в файле filesfolders.json") #теперь работает и с кириллицей
