@@ -36,10 +36,10 @@ print("Для №3, перевожу это '{}' в дату - {}".format(dd,ddd
 в переменную и потом к этой переменной добавить 
 один год и определить какой это по счету день 
 """
-td=datetime.today()-timedelta(days=30)
-
-ntd=td.replace(year=td.year+1)
-print("Для №4",ntd.date())
+td=datetime.today()
+tdm=td.replace(month=td.month-1) #Отнять от даты на текущей даты месяц
+ntd=tdm.replace(year=tdm.year+1) #добавить один год
+print("Для №4 {}, и этот день это {}-й день года".format((ntd.date()),ntd.timetuple().tm_yday))
 #______________________________________________________________
 """
 По заданному числу n от 1 до 365 определите, 
