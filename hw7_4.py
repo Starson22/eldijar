@@ -12,7 +12,10 @@ def path_structure(path):
         'name': os.path.basename(path),
         'path': path,
     }
-    try:
+# try попытается выполнить код ниже, для каждого файла/папки он вызовит себя если ошибка перейдет на Except, снизу 
+# а там если № ошибки не равен номеру ошибки ENOTDIR-(не папка), любая ошибка которая не ENOTDIR то мы перевызываем ошибку через raise
+# потом если ошибка =ENOTDIR то значение Type в hierarchy будет file
+    try: 
         hierarchy['children'] = [path_structure(os.path.join(path, contents)) for contents in os.listdir(path)]
     except OSError as e:			  #
         if e.errno != errno.ENOTDIR:  # интересная штука exception
